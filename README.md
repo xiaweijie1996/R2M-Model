@@ -33,4 +33,11 @@ But before doing it, make sure you use a csv file and the format of data is hour
 <p align="center">
 Figure 2. Consumption data over a year(8760 hours)
 </p> 
- __The first way__  to uplaod consumption data is simply paste a csv file in folder `customer_consumption`(Input_data->customer_consumption), But plesae make sure the name of the file is like `consumption_data0.csv`,`consumption_data1.csv`,`consumption_data2.csv`,the number represent the index of your customer, and the number must be consecutive if you have multiple consumers.
+`The first way`: This way is simply paste a csv file in folder `customer_consumption`(Input_data->customer_consumption), But plesae make sure the name of the file is like `consumption_data0.csv`,`consumption_data1.csv`,`consumption_data2.csv`,the number represent the index of your customer, and the number must be consecutive if you have multiple consumers.  
+`The second way`: In case you do not have consumption data, you can go to folder `Some_tools`,opening file named `Annual_consumption.py`. The program is like `Figure 3`. What you need to do is simply assume a annual consumption of a customer(total consumption in a year), the you will get a file named `consumption_data.csv`, data in this file is simulated consumption data which you can use in `The first way`.  
+<div align=center>
+<img src="https://user-images.githubusercontent.com/84010474/152436421-76808dd9-6ec7-487c-9883-cb31c5b93164.png" >
+</div>
+<p align="center">
+Figure 3. Annual_consumption file
+</p>  
