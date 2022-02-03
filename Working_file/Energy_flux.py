@@ -36,7 +36,7 @@ def consumer_profile (
     char_time_start = parameters[4] #charging start time
     char_time_stop = parameters[5]  #charging stop time
  
-    data_all_or = customer_data_profile(path,pv)
+    data_all_or = customer_data_profile(path,pv_data)
     data_all_or_consumer = np.copy(data_all_or)
     for i in range(len(data_all_or)):
         data_all_or_consumer[i,2] = pv_consumer_percentage*data_all_or[i,2]
