@@ -272,8 +272,3 @@ def consumer_profile (
     data=np.vstack((head,np.hstack((data_all_or_consumer,data_power_battery))))
 
     return data
-
-# pv = PV()
-in_file_prefix = r'..\Input_Data\customer_consumption\consumption_data0.csv'
-# parameterss = [1,30000,0.05,1400,4,7]
-c=consumer_profile(in_file_prefix,pv)

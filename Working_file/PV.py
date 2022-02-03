@@ -22,16 +22,3 @@ class PV:
 
     def ss(self):
         return(self.area)
-"The parameters you can change"
-"————————————————————————————————————————————"
-"Adjusting PV parameters"
-area1 = 20.576 # m^2
-panel_efficiency1 = 0.203
-loss1 = 0.8
-number_panels1 = 40
-
-
-"The parameters you do not need to change"
-# n_coustomer = number_customers() # number of customers, depend on number of consumptions files you upload
-pv = PV()
-gen = pv.ss()
