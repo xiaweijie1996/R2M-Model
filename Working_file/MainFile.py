@@ -17,9 +17,9 @@ loss = 0.8
 number_panels = 40
 
 "Adjusting battery parameters"
-capacity_battery = 30000  #Wh batter's capacity_batterycapacity_battery = 30000,  #Wh batter's capacity_battery
-deep_battery = 0.05  #batter discharge at most to capacity_battery*deep_battery of its capacity_battery
-bat_charge_speed = 1400 #w charging speed
+capacity_battery = 30000   #batter's capacity_battery, Wh 
+deep_battery = 0.05  #The maximum allowed charge deepth 
+bat_charge_speed = 1400 #charging speed, Wh
 
 "Adjusting charging time"
 char_time_start = 3  #charging start time
