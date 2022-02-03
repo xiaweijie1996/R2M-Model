@@ -20,7 +20,17 @@ There are several steps to use the main functions of model.
 <p align="center">
 Figure 1. Irradiation data over a year(8760 hours)
 </p>  
-3- Then, you put the data file in folder `irradiation`(Input_data->irradiation).  
-4- Finally, the name of the file has to be `irradiation_file.csv`, otherwise the program cannot find the file.
 
+3- Then, you put the data file in folder `irradiation` (Input_data->irradiation).  
+4- Finally, the name of the file has to be `irradiation_file.csv`, otherwise the program cannot find the file.(The recommended way is to paste the data in exist csv file)  
 
+## How to upload the consumption data of consumers?
+There are two ways to do it.  
+But before doing it, make sure you use a csv file and the format of data is hourly consumption over a year, `Figure 2` is a example.  
+<div align=center>
+<img src="https://user-images.githubusercontent.com/84010474/152434505-cf5369ff-280a-4e4c-9105-575131ee77a3.png" >
+</div>
+<p align="center">
+Figure 2. Consumption data over a year(8760 hours)
+</p> 
+ __The first way__  to uplaod consumption data is simply paste a csv file in folder `customer_consumption`(Input_data->customer_consumption), But plesae make sure the name of the file is like `consumption_data0.csv`,`consumption_data1.csv`,`consumption_data2.csv`,the number represent the index of your customer, and the number must be consecutive if you have multiple consumers.
