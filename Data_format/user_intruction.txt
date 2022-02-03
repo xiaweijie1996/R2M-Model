@@ -1,0 +1,2 @@
+In case you accidently delete some file and forget the format of this kind of file, 
+in this folder, you can file all types of file and see what the format is.
