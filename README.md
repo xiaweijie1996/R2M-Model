@@ -19,8 +19,8 @@ There are several steps to use the main functions of model.
 </div>
 <p align="center">
 Figure 1. Irradiation data over a year(8760 hours)
-</p>
-3- Then, you put the data file in folder **irradiation**(Input_data->irradiation).
-4- Finally, the name of the file has to be **irradiation_file.csv**, otherwise the program cannot find the file.
+</p>  
+3- Then, you put the data file in folder `irradiation`(Input_data->irradiation).  
+4- Finally, the name of the file has to be `irradiation_file.csv`, otherwise the program cannot find the file.
 
 
