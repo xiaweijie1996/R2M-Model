@@ -80,14 +80,14 @@ char_time_stop: charging stop time.
 pv_allocation: pv_allocation is a list, the number of components have to match the number of customers, the sum of components has to be 1.  
 
 ## The explanation of output data of EnergyFlux_data.
-generation_pv: the generation of PV in this hour.  
-consumption: the consumption of customer in this hour.  
-surplus: the energy surplus in this hour, if consumption<=generation_pv, then, surplus=generation_pv-consumption, otherwise surplus=0.  
-grid consumption: grid consumption is the power consumption supporting by gird in this hour in the scenario **without battery**.   
-use_power_pv1: use_power_pv1 is the power consumption supporting by PV panel in this hour.  
-use_power_grid1: use_power_grid1 is the power consumption supporting by gird in this hour in the scenario **with the battery**.  
-en_battery_grid1: en_battery_grid1 is the enegy absorbed by battery from the grid.  
-en_battery_pv1: en_battery_pv1 is the enegy absorbed by battery from the PV panel.  
-en_dump1: en_dump 1 is the energy left after consumption and charging of the battery, this part of energy can be sold.   
+`generation_pv`: the generation of PV in this hour.  
+`consumption`: the consumption of customer in this hour.  
+`surplus`: the energy surplus in this hour, if consumption<=generation_pv, then, surplus=generation_pv-consumption, otherwise surplus=0.  
+`grid consumption`: grid consumption is the power consumption supporting by gird in this hour in the scenario **without battery**.   
+`use_power_pv1`: use_power_pv1 is the power consumption supporting by PV panel in this hour.  
+`use_power_grid1`: use_power_grid1 is the power consumption supporting by gird in this hour in the scenario **with the battery**.  
+`en_battery_grid1`: en_battery_grid1 is the enegy absorbed by battery from the grid.  
+`en_battery_pv1`: en_battery_pv1 is the enegy absorbed by battery from the PV panel.  
+`en_dump1`: en_dump 1 is the energy left after consumption and charging of the battery, this part of energy can be sold.   
 
 
