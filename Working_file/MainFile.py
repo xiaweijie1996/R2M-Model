@@ -41,7 +41,7 @@ for i in range(n_coustomer):
     out_file_prefix = r'..\Output_Data\EnergyFlux_data\con_gen_data'
     out_file_name = out_file_prefix + str(i) + '.csv' 
     parameters_consumption[0] =  pv_allocation[i]
-    with open(out_file_name,'w') as file:
+    with open(out_file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerows(consumer_profile(in_file_name,pv,parameters_consumption))
         
