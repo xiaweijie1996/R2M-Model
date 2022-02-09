@@ -4,16 +4,16 @@ R2M-MODEL Instruction
 
 
 ## Overview
-There are several steps to use the main functions of model.  
+There are several steps to use the main functions of the model.  
 * Upload the PV irradiation data.  
 * Upload the consumption data of consumers.  
-* Set the parameters of model(eg, battery capacity, PV panel efficiency .etc).  
+* Set the parameters of model (eg, battery capacity, PV panel efficiency,...etc).  
 * Find the output.  
 ...  
 
 ## How to upload the PV irradiation data?
-**1-** First, you need go to the websit(https://re.jrc.ec.europa.eu/pvg_tools/es/#PVP) to download the irradiation data of a certain location, the data has to be hourly in a year.   
-**2-** After downloading the data, you have to process the data and calcuate the global irradiation, this process can be done in Excel.(Note1: in this process, you may have to choose slope, azimuth .etc. Note2: in this process, the result is a colume of `global irradiation` data over a year, like `Figue 1`)  
+**1-** First, the irradiation data of a certain location has to be downloaded from the website (https://re.jrc.ec.europa.eu/pvg_tools/es/#PVP). The data has to be hourly in a year.   
+**2-** After downloading the data, it has to be processed and the global irradiation calculated, this process can be done in Excel. (Note1: in this process, you may have to choose slope, azimuth .etc. Note2: in this process, the result is a column of `global irradiation` data over a year, like `Figue 1`)  
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/84010474/152431749-a1874a4b-7336-45dd-86bf-cfbc943cd197.png" >
@@ -22,12 +22,12 @@ There are several steps to use the main functions of model.
 Figure 1. Irradiation data over a year(8760 hours)
 </p>  
 
-**3-** Then, you put the data file in folder `irradiation` (Input_data->irradiation).  
-**4-** Finally, the name of the file has to be `irradiation_file.csv`, otherwise the program cannot find the file.(The recommended way is to paste the data in exist csv file)  
+**3-** Then, the data file has to be placed in the folder `irradiation` (Input_data->irradiation).  
+**4-** Finally, the name of the file has to be `irradiation_file.csv`, otherwise the program will not be able to find the file. (The recommendeded way is to paste the data in exist csv file)  
 
 ## How to upload the consumption data of consumers?
 There are two ways to do it.  
-But before doing it, make sure you use a csv file and the format of data is hourly consumption over a year, `Figure 2` is a example.  
+But before doing it, make sure you use a csv file and the format of data is hourly consumption over a year, `Figure 2` is an example.  
 <div align=center>
 <img src="https://user-images.githubusercontent.com/84010474/152434505-cf5369ff-280a-4e4c-9105-575131ee77a3.png" >
 </div>
