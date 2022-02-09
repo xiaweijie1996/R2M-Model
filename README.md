@@ -101,14 +101,14 @@ Inclination (degrees): 10
 With these values the minimum distance is given following Figure 5, and an extra 5% added to give the recommended distance between panels.
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/84010474/152436421-76808dd9-6ec7-487c-9883-cb31c5b93164.png" >
+ENTER IMAGE LINK
 </div>
 <p align="center">
 Figure 5. Calculation of minimum distance between panels
 </p>  
 
 The data of the panel corresponds to a policristaline PERC Canadian Solar and is taken from: https://drive.google.com/drive/folders/1V6A4QYkpaBNFW43knFr8O-DXwlMuXWdd
-The power of the panel is 0.36 
+The power of the panel is 0.36 kW
 
 For an inclined surface use the following website can be used: https://www.monsolar.com/separacion-paneles-solares
 
