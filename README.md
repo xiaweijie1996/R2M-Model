@@ -92,11 +92,16 @@ pv_allocation: pv_allocation is a list, the number of components have to match t
 
 ## Calculation distance between panels accounting for possible shadowing
 The input data needed is:
-Height of the panel (m): 1.134.
+
+Height of the panel (m): 1.134
+
 Width of the panel (m): 2.279.
 
+
 Latitude of the location (degrees): 41.38
+
 Inclination (degrees): 10
+
 
 With these values the minimum distance is given following Figure 5, and an extra 5% added to give the recommended distance between panels.
 
@@ -112,5 +117,7 @@ The power of the panel is 0.36 kW
 
 For an inclined surface use the following website can be used: https://www.monsolar.com/separacion-paneles-solares
 
-Minimum distance from chimneys: 0.9 m
-Distance from other panels: 0.5m
+The following also have to be taken into account: 
+The minimum distance from chimneys is: 0.9 m
+
+The distance from other panels (horizontal) shall be: 0.5m
