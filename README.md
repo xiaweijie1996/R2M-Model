@@ -91,12 +91,17 @@ pv_allocation: pv_allocation is a list, the number of components have to match t
 `en_dump1`: en_dump 1 is the energy left after consumption and charging of the battery, this part of energy can be sold.   
 
 ## Calculation distance between panels accounting for possible shadowing
+**Input data**  
 The input data needed is:
 Height of the panel (m): 1.134
-Width of the panel (m): 2.279.
+Width of the panel (m): 2.279
+The power of the panel is 0.36 kW
+
+The data of the panel selected corresponds to a policristaline PERC Canadian Solar and is taken from: https://drive.google.com/drive/folders/1V6A4QYkpaBNFW43knFr8O-DXwlMuXWdd
 
 Latitude of the location (degrees): 41.38
 Inclination (degrees): 10
+
 
 With these values the minimum distance is given following Figure 5, and an extra 5% added to give the recommended distance between panels.
 
@@ -107,11 +112,20 @@ With these values the minimum distance is given following Figure 5, and an extra
 Figure 5. Calculation of minimum distance between panels
 </p>  
 
-The data of the panel corresponds to a policristaline PERC Canadian Solar and is taken from: https://drive.google.com/drive/folders/1V6A4QYkpaBNFW43knFr8O-DXwlMuXWdd
-The power of the panel is 0.36 kW
+Other inputs are:
+The total surface (m): 62
+The "flat surface"; if installed directly with the slope of the roof (m): 160
 
-For an inclined surface use the following website can be used: https://www.monsolar.com/separacion-paneles-solares
+**Output data** 
+The outputs are:
+
+* The area of a matrix, number of matrices and finally the installed power (kW)
+* The area of a matrix, number of matrices and finally the installable power (kW)
+
+**Other remarks** 
 
 The following also have to be taken into account: 
 The minimum distance from chimneys is: 0.9 m
 The distance from other panels (horizontal) shall be: 0.5m
+
+For an inclined surface use the following website can be used: https://www.monsolar.com/separacion-paneles-solares
