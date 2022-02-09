@@ -92,8 +92,8 @@ pv_allocation: pv_allocation is a list, the number of components have to match t
 
 ## Calculation distance between panels accounting for possible shadowing
 The input data needed is:
-Height of the panel (m): 1.134
-Width of the panel (m): 2.279
+Height of the panel (m): 1.134.
+Width of the panel (m): 2.279.
 
 Latitude of the location (degrees): 41.38
 Inclination (degrees): 10
