@@ -90,4 +90,27 @@ pv_allocation: pv_allocation is a list, the number of components have to match t
 `en_battery_pv1`: en_battery_pv1 is the enegy absorbed by battery from the PV panel.  
 `en_dump1`: en_dump 1 is the energy left after consumption and charging of the battery, this part of energy can be sold.   
 
+## Calculation distance between panels accounting for possible shadowing
+The input data needed is:
+Height of the panel (m): 1.134
+Width of the panel (m): 2.279
 
+Latitude of the location (degrees): 41.38
+Inclination (degrees): 10
+
+With these values the minimum distance is given following Figure 5, and an extra 5% added to give the recommended distance between panels.
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/84010474/152436421-76808dd9-6ec7-487c-9883-cb31c5b93164.png" >
+</div>
+<p align="center">
+Figure 5. Calculation of minimum distance between panels
+</p>  
+
+The data of the panel corresponds to a policristaline PERC Canadian Solar and is taken from: https://drive.google.com/drive/folders/1V6A4QYkpaBNFW43knFr8O-DXwlMuXWdd
+The power of the panel is 0.36 
+
+For an inclined surface use the following website can be used: https://www.monsolar.com/separacion-paneles-solares
+
+Minimum distance from chimneys: 0.9 m
+Distance from other panels: 0.5m
