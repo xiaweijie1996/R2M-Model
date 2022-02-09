@@ -101,7 +101,7 @@ Inclination (degrees): 10
 With these values the minimum distance is given following Figure 5, and an extra 5% added to give the recommended distance between panels.
 
 <div align=center>
-ENTER IMAGE LINK
+![Downloads](/downloads/shadows.png)
 </div>
 <p align="center">
 Figure 5. Calculation of minimum distance between panels
