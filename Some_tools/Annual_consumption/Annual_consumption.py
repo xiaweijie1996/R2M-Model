@@ -2,6 +2,11 @@ import pandas as pd
 import numpy as np
 import csv
 
+"The parameters you can change"
+"————————————————————————————————————————————"
+annual_consumption = 42599.56  #  unit kWh
+
+"————————————————————————————————————————————"
 
 def consumption_curve(annual_consumption):
 
@@ -19,7 +24,7 @@ def consumption_curve(annual_consumption):
     
     return c_curve
 
-annual_consumption = 42599.56  #  unit KWh
+
 file_name = 'consumption_data'
 curve = consumption_curve(annual_consumption)
 curve.to_csv(file_name,index=False)

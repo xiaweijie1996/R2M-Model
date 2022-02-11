@@ -3,11 +3,11 @@ import numpy as np
 from matplotlib import pyplot as plt 
 "The parameters you can change"
 "————————————————————————————————————————————"
-file_name = '\con_gen_data3.csv'
+file_name = 'con_gen_data3.csv'  # The name is the file name of output file
 "————————————————————————————————————————————"
 
 prefix = r'..\..\Output_Data\EnergyFlux_data'
-path = prefix + file_name
+path = prefix  + '\\' + file_name
 
 "Surplus in a day ( average for a year) withou battery"
 con_gen_curve = pd.read_csv(path,engine = "python" )
@@ -23,9 +23,10 @@ x2=day_surplus
 string='Average surplus in a day'
 plt.title(string) 
 plt.xlabel("Time h") 
-plt.ylabel("Surplus w")
+plt.ylabel("Surplus Wh")
 plt.plot(x1,x2)
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
 
 "Surplus in a month ( average for a year)"
 month_surplus=np.zeros(24*30)
@@ -41,9 +42,10 @@ x4=month_surplus
 string='Average surplus in a month withou battery'
 plt.title(string) 
 plt.xlabel("Time h") 
-plt.ylabel("Surplus w")
+plt.ylabel("Surplus Wh")
 plt.plot(x3,x4)
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
 
 "power consumption without battery in a day"
 day_con=np.zeros(24)
@@ -64,15 +66,17 @@ day_surplus=day_surplus/365
 x5=day_con
 x6=day_grid
 x7=day_pv
-string='Average consumption/PV/Grid consumption over a day without battery'
+
+string='Average consumption&PV&Grid consumption over a day without battery'
 plt.title(string) 
 plt.plot(x1,x5,label='Total consumption')
 plt.plot(x1,x6,label='Grid consumption')
 plt.plot(x1,x7,label='PV')
 plt.xlabel("Time h") 
-plt.ylabel("Power w")
+plt.ylabel("Energy Consumption Wh")
 plt.legend()
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
   
 
 "power consumption without battery in a month"              
@@ -92,15 +96,16 @@ month_grid = month_grid/12
 x8=month_con
 x9=month_grid
 x10=month_pv
-string='Average consumption/PV/Grid consumption over a day without battery'
+string='Average consumption&PV&Grid consumption over a day without battery'
 plt.title(string) 
 plt.plot(x3,x8,label='Total consumption')
 plt.plot(x3,x9,label='Grid consumption')
 plt.plot(x3,x10,label='PV')
 plt.xlabel("Time h") 
-plt.ylabel("Power w")
+plt.ylabel("Energy Consumption Wh")
 plt.legend(loc=2)
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
 
 "power consumption with battery in a day"         
 day_dump=np.zeros(24)
@@ -115,11 +120,12 @@ x12=day_dump
 string='Dumped eneryg over a day(with battery)'
 plt.title(string) 
 plt.xlabel("Time h") 
-plt.ylabel("Dumped eneryg w")
+plt.ylabel("Dumped eneryg Wh")
 plt.plot(x11,day_surplus,'--',label='Surplus')
 plt.plot(x11,x12,label='Dumped energy')
 plt.legend()
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
 
 "power consumption with battery in a month"              
 month_con_b=np.zeros(24*30)
@@ -138,15 +144,16 @@ month_grid_b = month_grid_b/12
 x13=month_con_b
 x14=month_grid_b
 x15=month_pv_b
-string='Average consumption/PV/Grid consumption over a month with battery'
+string='Average consumption&PV&Grid consumption over a month with battery'
 plt.title(string) 
 plt.plot(x3,x13,label='Total consumption')
 plt.plot(x3,x14,label='Grid consumption')
 plt.plot(x3,x15,label='PV')
 plt.xlabel("Time h") 
-plt.ylabel("Power w")
+plt.ylabel("Energy Consumption Wh")
 plt.legend(loc=2)
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
 
 "power consumption with battery in a day"              
 day_con_b=np.zeros(24)
@@ -165,15 +172,16 @@ day_grid_b = day_grid_b/365
 x16=day_con_b
 x17=day_grid_b
 x18=day_pv_b
-string='Average consumption/PV/Grid consumption over a day with battery'
+string='Average consumption&PV&Grid consumption over a day with battery'
 plt.title(string) 
 plt.plot(x1,x16,label='Total consumption')
 plt.plot(x1,x17,label='Grid consumption')
 plt.plot(x1,x18,label='PV')
 plt.xlabel("Time h") 
-plt.ylabel("Power w")
+plt.ylabel("Energy Consumption Wh")
 plt.legend(loc=2)
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
 
 "battery status in a day"        
 day_b=np.zeros(24)
@@ -189,9 +197,10 @@ string='battery status in a day'
 plt.title(string) 
 plt.plot(x1,x19,label='battery status')
 plt.xlabel("Time h") 
-plt.ylabel("battery status wh")
+plt.ylabel("Battery status Wh")
 plt.legend(loc=2)
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
 
 
 "battery status in a month"        
@@ -208,6 +217,7 @@ string='battery status in a month'
 plt.title(string) 
 plt.plot(x3,x20,label='battery status')
 plt.xlabel("Time h") 
-plt.ylabel("battery status wh")
+plt.ylabel("Battery status Wh")
 plt.legend(loc=2)
-plt.show()
+plt.savefig(string+'.png')
+plt.close()
