@@ -40,7 +40,7 @@ Figure 2. Consumption data over a year(8760 hours)
 **The second way**: In case you do not have consumption data, you can go to folder `Some_tools`,opening file named `Annual_consumption.py`. The program is like `Figure 3`. What you need to do is simply assume a annual consumption of a customer(total consumption in a year), the you will get a file named `consumption_data.csv`, data in this file is simulated consumption data which you can use in `The first way`.  
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/84010474/152436421-76808dd9-6ec7-487c-9883-cb31c5b93164.png" >
+<img src="https://user-images.githubusercontent.com/84010474/153673712-747ab19d-1d10-4796-8ba1-bdd9f2e776dc.png" >
 </div>
 <p align="center">
 Figure 3. Annual_consumption file
