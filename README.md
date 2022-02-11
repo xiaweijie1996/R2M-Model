@@ -59,6 +59,19 @@ Figure 4. MainFile
 ## How to see my output?
 After setting the parameters of `MainFile`, you can runn this file, the output is the simulated data of your customers, you can find the output file in `EnergyFlux_data`(Output_data->EnergyFlux_data).
 
+## How to use visualization tool?
+Following the path:(smalltools->Visualization). you will find a file name `Visualization.py`, open it and choose the data sources you want visualized by change te file_name, as show in Fig 5. The 'file_name' is the name of file in (Output_data->EnergyFlux_data). Aftering changing the file_name, you can run the file, the program will then generate several figures in the folder.
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/84010474/153673015-3a43a358-ef09-480c-a880-b31f22d74e22.png" >
+<img src="https://user-images.githubusercontent.com/84010474/153673384-988e6d79-fed9-4690-a3f6-ab3711429ad3.png">
+
+</div>
+ 
+<p align="center">
+Figure 5. Visualization tool
+</p>  
+
 ## The explanation of input data.
 
 **PV parameters**  
@@ -106,11 +119,11 @@ Inclination (degrees): 10
 With these values the minimum distance is given following Figure 5, and an extra 5% added to give the recommended distance between panels.
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/60061119/153641804-638aca0b-b4e4-4df6-8143-8b3191ae955d.png" 
+<img src="https://user-images.githubusercontent.com/60061119/153641804-638aca0b-b4e4-4df6-8143-8b3191ae955d.png" >
 </div>
  
 <p align="center">
-Figure 5. Calculation of minimum distance between panels
+Figure 6. Calculation of minimum distance between panels
 </p>  
 
 Other inputs are:
