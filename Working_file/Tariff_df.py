@@ -24,7 +24,6 @@ data_df['instant_consumption'] = data_df["generation_pv"] - data_df["surplus"]
 r4 = data_df['en_battery_grid1']
 r5 = data_df['grid consumption']
 r6 = data_df['instant_consumption']
-print("Instant self-consumption is: ", r6)
 
 # Tariffs_3 = np.array(['P1','P2','P3','P4','P5','P6'])
 # Energy_term_3  = np.array([0.171, 0.147, 0.117, 0.097, 0.083, 0.077])
