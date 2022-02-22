@@ -143,3 +143,33 @@ The minimum distance from chimneys is: 0.9 m
 The distance from other panels (horizontal) shall be: 0.5m
 
 For an inclined surface use the following website can be used: https://www.monsolar.com/separacion-paneles-solares
+
+
+## Explanation for the Billing part
+
+**Variables that the user have to change for the given case**
+
+**Updating Tariffs**
+
+the tariffs can be updated from the utility company's website. in the tool, two types of customers with two different tariffs are considered for the case study.
+
+Following the Spanish Tariff scheme, for Customers with a connection point of 15kW or above, the type of tariff used is "3.0 TD". To keep it simple, customers under this tariff are considered to be `Business` in nature becuase of larger connection point. There are 3 different components to this tariffs which will be explained in short. 3.0TD tariffs contains 6 price periods distributed across 24 hours (a day).
+
+`Energy_term_3`: This component signifies the cost of using the electricity for each of the 6 periods given per unit MWh consumed.
+`Power_term_3`: This component signifies the cost of having the power connection for a period of time, which in this case is kW per day.
+`Billed_power_3`: This componnet signifies the amount of power being supplied by the DSO at any given time, in this case denoted in kW.
+
+"2.0 TD"
+
+The customers who are connected less than 15kW or below are considered to be `Homeowners` or `Residential` customers. There can be several other possibilities but are neglected to keep the tool simple and accessable to the majority. the tariff assigned consists of 3 periods distributed across 24 hours (a day).
+
+`Energy_term_2`: Same as `Energy_term_3` for 2.0 TD that contains only 3 periods.
+`Power_term_2`: Same as `Power_term_3` for 2.0 TD. 
+`Billed_power_2`: Same as `Billed_power_3` for 2.0 TD.
+
+**Furthurmore, there are few variables that are independent of the Utility company that the customer is entitled.**
+
+
+
+
+
