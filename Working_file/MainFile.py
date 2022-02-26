@@ -62,7 +62,7 @@ for i in range(n_coustomer):
 
 "Billing Customers"
 
-User_input = input(" Please Enter the if you are a  self-consumer: ")  # Answer "Yes" or "No"
+User_input = input("Are you a self-consumer [Yes/No]: ")  # Answer "Yes" or "No"
 
 if User_input == "Yes":
     from sc import *
