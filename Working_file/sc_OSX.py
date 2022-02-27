@@ -54,7 +54,7 @@ tot = (tot_energy + tot_power) * (1 + tax_electricity)
 bef_iva = tot+R2M+em_service+meter_rent+pv_ppa
 tot_inv = bef_iva * (1 + IVA)
 
-print("Invoice after tax: ", tot)
+print("Invoice after Electricity tax: ", tot)
 print("PV-PPA Without Electricity tax: ", pv_ppa)
 print("Metered Equipment rental: in Euro ",meter_rent)
 print("Electrical emergency service in Eur : ",em_service)

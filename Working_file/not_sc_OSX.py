@@ -46,7 +46,7 @@ IVA = 0.21       # 21 Percent
 tot = (tot_energy + tot_power) * (1 + tax_electricity)
 bef_iva = tot + em_service + meter_rent
 tot_inv = bef_iva * (1 + IVA)
-print("Invoice after tax in Euro: ", tot)
+print("Invoice after Electricity tax in Euro: ", tot)
 print("Metered Equipment rental: in Euro ",meter_rent)
 print("Electrical emergency service in Euro : ",em_service)
 print("Invoice before IVA: " ,bef_iva)
