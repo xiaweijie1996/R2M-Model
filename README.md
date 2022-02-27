@@ -167,9 +167,13 @@ The customers who are connected less than 15kW or below are considered to be `Ho
 `Power_term_2`: Same as `Power_term_3` for 2.0 TD. 
 `Billed_power_2`: Same as `Billed_power_3` for 2.0 TD.
 
-**Furthurmore, there are few variables that are independent of the Utility company that the customer is entitled.**
+**Furthurmore, there are few variables that are independent of the Utility company that the customer has to change.**
 
-
+`tax_electricity` -  Electricity tax
+`meter_rent` - Metered equipment rental in Euro per month. 
+`em_service`   -  Electrical Emergancy service in Euro per month.
+`IVA = 0.21`   - 21 Percent, equivalent to VAT (Value Added Tax).
+`pv_energy_terms` - Power purchase agreement in EUR/KWh. 
 
 
 
