@@ -42,6 +42,13 @@ Energy_term_2  = np.array([0.407, 0.320, 0.262])  # EUR/MWh
 Power_term_2   = np.array([0.081583562, 0.008432877])    # Euro per kw per day
 Billed_power_2 = np.array([4, 4])   # in KW
 
+# These might vary with the location.
+tax_electricity = 0.051127  # 5.11 percentage ,  Electricity tax
+meter_rent  = 0.81*30      # in Euro per month ,  Metered equipment rental
+em_service  = 2.06      # in Euro per month , Electrical Emergancy service
+IVA = 0.21       # 21 Percent, equivalent to VAT (Value Added Tax)
+pv_energy_terms = 0.12, # EUR/KWh , Power purchase agreement
+
 "————————————————————————————————————————————"
 
 "The parameters you do not need to change"

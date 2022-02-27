@@ -7,7 +7,7 @@ import os
 user = input("which type of customer are you: ",  )
 if user == "Business":
     Tariffs_3      = np.array(['P1','P2','P3','P4','P5','P6'])
-    Energy_term_3  = np.array([0.387, 0.350, 0.319, 0.293, 0.266, 0.253])
+    Energy_term_3  = np.array([0.387, 0.350, 0.319, 0.293, 0.266, 0.253]) #EUR/KWh
     Power_term_3   = np.array([0.045671833, 0.033543392, 0.016257762, 0.013830986, 0.009228504, 0.005896482])   # Euro per kw per day
     Billed_power_3 = np.array([18, 18, 18, 18, 18, 18])  ## in KW
     cons_p = []
@@ -24,7 +24,7 @@ if user == "Business":
 
 elif user == "Residential" or user == "Homeowner":
     Tariffs_2 = np.array(['P1','P2','P3'])
-    Energy_term_2  = np.array([0.407, 0.320, 0.262])
+    Energy_term_2  = np.array([0.407, 0.320, 0.262]) #EUR/KWh
     Power_term_2   = np.array([0.081583562, 0.008432877])    # Euro per kw per day
     Billed_power_2 = np.array([3, 2])   ## in KW
     cons_p = []
