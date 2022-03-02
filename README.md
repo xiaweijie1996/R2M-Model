@@ -179,8 +179,9 @@ The customers who are connected less than 15kW or below are considered to be `Ho
 Once you have done changing these variables according to your requirements, you have to save the `MainFile.py`file(`MainFile_0SX.py` if your using macOS).
 
 Now, before running the file you need to make sure you have all the python packages required to run the tool. you can do this by installing the requirement.txt located in the same folder. You can do this by typing the following command in your `CLI` (Command Prompt/Terminal).
-
+<p align="center">
 <img width="333" alt="Screenshot 2022-02-26 at 5 41 16 PM" src="https://user-images.githubusercontent.com/89131947/156340255-0352f333-8baa-44b1-89ae-02d32ea9a08d.png">
+ </p>
 
 Once you have installed the packages, now you can run the `MainFile.py`file(`MainFile_0SX.py` if your using macOS).
 
