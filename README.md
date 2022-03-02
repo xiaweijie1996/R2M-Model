@@ -169,7 +169,7 @@ The customers who are connected less than 15kW or below are considered to be `Ho
 
 **Furthurmore, there are few variables that are independent of the Utility company that the customer has to change.**
 
-`tax_electricity` -  Electricity tax
+`tax_electricity` -  Electricity tax.
 `meter_rent` - Metered equipment rental in Euro per month. 
 `em_service`   -  Electrical Emergancy service in Euro per month.
 `IVA = 0.21`   - 21 Percent, equivalent to VAT (Value Added Tax).
