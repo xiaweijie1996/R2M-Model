@@ -1,4 +1,4 @@
-from Tariff_df import *
+from Tariff_df_OSX import *
 import pandas as pd
 import numpy as np
 import os

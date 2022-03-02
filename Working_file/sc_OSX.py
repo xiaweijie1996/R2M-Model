@@ -1,4 +1,4 @@
-from Tariff_df import *
+from Tariff_df_OSX import *
 import pandas as pd
 import numpy as np
 import os
@@ -24,8 +24,8 @@ if user == "Business":
 
 elif user == "Residential" or user == "Homeowner":
     Tariffs_2 = np.array(['P1','P2','P3'])
-    Energy_term_2  = np.array([0.407, 0.320, 0.262])  #EUR/KWh
-    Power_term_2   = np.array([0.081583562, 0.008432877])    # Euro per KW per day
+    Energy_term_2  = np.array([0.407, 0.320, 0.262]) #EUR/KWh
+    Power_term_2   = np.array([0.081583562, 0.008432877])    # Euro per kw per day
     Billed_power_2 = np.array([3, 2])   ## in KW
     cons_p = []
     for i in Tariffs_2:
