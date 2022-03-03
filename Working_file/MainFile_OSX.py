@@ -1,7 +1,7 @@
-from PV import *
-from Consumption import *
-from Energy_flux import *
-from Tariff_df import *
+from PV_OSX import *
+from Consumption_OSX import *
+from Energy_flux_OSX import *
+from Tariff_df_OSX import *
 import pandas as pd
 import numpy as np
 import os
@@ -32,13 +32,13 @@ pv_allocation=[0, 0.2, 0, 0.8]  # The number of components have to match the num
 "Updating Tariffs"  
 "3.0 TD"
 
-Energy_term_3  = np.array([0.387, 0.350, 0.319, 0.293, 0.266, 0.253]) # EUR/KWh
+Energy_term_3  = np.array([0.387, 0.350, 0.319, 0.293, 0.266, 0.253]) # EUR/MWh
 Power_term_3   = np.array([0.045671833, 0.033543392, 0.016257762, 0.013830986, 0.009228504, 0.005896482])   # Euro per kw per day
 Billed_power_3 = np.array([18, 18, 18, 18, 18, 18])  # in KW
 
 "2.0 TD"
 
-Energy_term_2  = np.array([0.407, 0.320, 0.262])  # EUR/KWh
+Energy_term_2  = np.array([0.407, 0.320, 0.262])  # EUR/MWh
 Power_term_2   = np.array([0.081583562, 0.008432877])    # Euro per kw per day
 Billed_power_2 = np.array([4, 4])   # in KW
 
@@ -58,9 +58,9 @@ parameters_consumption = [1,capacity_battery,deep_battery,bat_charge_speed,char_
 
 "Creating Energy flux data file"
 for i in range(n_coustomer):
-    in_file_prefix = r'..\Input_Data\customer_consumption\consumption_data'
+    in_file_prefix = r'../Input_Data/customer_consumption/consumption_data'
     in_file_name = in_file_prefix + str(i) + '.csv' 
-    out_file_prefix = r'..\Output_Data\EnergyFlux_data\con_gen_data'
+    out_file_prefix = r'../Output_Data/EnergyFlux_data/con_gen_data'
     out_file_name = out_file_prefix + str(i) + '.csv' 
     parameters_consumption[0] =  pv_allocation[i]
     with open(out_file_name, mode='w', newline='') as file:
@@ -72,10 +72,10 @@ for i in range(n_coustomer):
 User_input = input("Are you a self-consumer [Yes/No]: ")  # Answer "Yes" or "No"
 
 if User_input == "Yes":
-    from sc import *
+    from sc_OSX import *
 
 elif User_input == "No":
-    from not_sc import *
+    from not_sc_OSX import *
 
 else:
     print("Please Answer with Yes or No")
