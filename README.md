@@ -10,6 +10,10 @@ There are several steps to use the main functions of the model.
 * Set the parameters of model (eg, battery capacity, PV panel efficiency,...etc).  
 * Find the output.  
 ...  
+Now, before running the file you need to make sure you have all the python packages required to run the tool. you can do this by installing the requirement.txt located in the same folder. You can do this by typing the following command in your `CLI` (Command Prompt/Terminal).
+<p align="center">
+<img width="333" alt="Screenshot 2022-02-26 at 5 41 16 PM" src="https://user-images.githubusercontent.com/89131947/156340255-0352f333-8baa-44b1-89ae-02d32ea9a08d.png">
+ </p>
 
 ## How to upload the PV irradiation data?
 **1-** First, the irradiation data of a certain location has to be downloaded from the website (https://re.jrc.ec.europa.eu/pvg_tools/es/#PVP). The data has to be hourly in a year.   
@@ -178,11 +182,12 @@ The customers who are connected less than 15kW or below are considered to be `Ho
 
 Once you have done changing these variables according to your requirements, you have to save the `MainFile.py`file(`MainFile_0SX.py` if your using macOS).
 
-Now, before running the file you need to make sure you have all the python packages required to run the tool. you can do this by installing the requirement.txt located in the same folder. You can do this by typing the following command in your `CLI` (Command Prompt/Terminal).
-<p align="center">
-<img width="333" alt="Screenshot 2022-02-26 at 5 41 16 PM" src="https://user-images.githubusercontent.com/89131947/156340255-0352f333-8baa-44b1-89ae-02d32ea9a08d.png">
- </p>
+
 
 Once you have installed the packages, now you can run the `MainFile.py`file(`MainFile_0SX.py` if your using macOS).
 
+<div align=center>
+<img src="https://user-images.githubusercontent.com/60061119/153641804-638aca0b-b4e4-4df6-8143-8b3191ae955d.png" >
+</div>
+![Project-2](https://user-images.githubusercontent.com/89131947/159369637-2c6b62f1-bfa2-4a19-ace3-3391760e426b.jpg)
 
