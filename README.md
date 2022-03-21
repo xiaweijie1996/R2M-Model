@@ -182,10 +182,7 @@ The customers who are connected less than 15kW or below are considered to be `Ho
 
 Once you have done changing these variables according to your requirements, you have to save the `MainFile.py`file(`MainFile_0SX.py` if your using macOS).
 
-
-
-
-Once you have installed the packages, now you can run the `MainFile.py`file(`MainFile_0SX.py` if your using macOS).
+The below image shows the procedure in steps.
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/89131947/159369863-696f7f77-1b36-4d71-931b-7705eeff4171.jpg" >
