@@ -184,10 +184,11 @@ Once you have done changing these variables according to your requirements, you 
 
 
 
+
 Once you have installed the packages, now you can run the `MainFile.py`file(`MainFile_0SX.py` if your using macOS).
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/60061119/153641804-638aca0b-b4e4-4df6-8143-8b3191ae955d.png" >
+<img src="https://user-images.githubusercontent.com/89131947/159369863-696f7f77-1b36-4d71-931b-7705eeff4171.jpg" >
 </div>
-![Project-2](https://user-images.githubusercontent.com/89131947/159369637-2c6b62f1-bfa2-4a19-ace3-3391760e426b.jpg)
+
 
