@@ -39,7 +39,7 @@ month_surplus=month_surplus/12
 
 x3=range(24*30)
 x4=month_surplus
-string='Average surplus in a month withou battery'
+string='Average surplus in a month without battery'
 plt.title(string) 
 plt.xlabel("Time h") 
 plt.ylabel("Surplus Wh")
@@ -117,7 +117,7 @@ for y in range(len(con_gen_curve)):
 day_dump=day_dump/365
 x11=range(24)
 x12=day_dump
-string='Dumped eneryg over a day(with battery)'
+string='Dumped energy over a day(with battery)'
 plt.title(string) 
 plt.xlabel("Time h") 
 plt.ylabel("Dumped eneryg Wh")
