@@ -69,7 +69,7 @@ Billed_power_3 = np.array([18, 18, 18, 18, 18, 18])  # in KW
 
 Energy_term_2  = np.array([0.407, 0.320, 0.262])  # EUR/MWh
 Power_term_2   = np.array([0.081583562, 0.008432877])    # Euro per kw per day
-Billed_power_2 = np.array([4, 4])   # in KW
+Billed_power_2 = np.array([4, 4])  # in KW
 
 "————————————————————————————————————————————"
 
