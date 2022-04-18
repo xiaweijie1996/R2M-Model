@@ -39,7 +39,7 @@ def consumer_profile (
     data_all_or = customer_data_profile(path,pv_data)
     data_all_or_consumer = np.copy(data_all_or)
     for i in range(len(data_all_or)):
-        data_all_or_consumer[i,2] = pv_consumer_percentage*data_all_or[i,2]
+        data_all_or_consumer[i,2] = pv_consumer_percentage[i]*data_all_or[i,2]
         if data_all_or_consumer[i,2]-data_all_or_consumer[i,3]<0:
             data_all_or_consumer[i,4] = 0
         else:
