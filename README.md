@@ -3,7 +3,7 @@ R2M-MODEL Instruction
 ==
 
 ## Recent Updata 2022-4-18  
-please see final branch  
+Please see final branch  
 1- Can adjust the PV generation to each customer every hour  
 2- Can set the battery capacity for each customer  
 
