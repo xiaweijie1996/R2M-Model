@@ -52,6 +52,7 @@ pv_energy_terms = 0.12, # EUR/KWh , Power purchase agreement
 "————————————————————————————————————————————"
 "The number of components have to match the number of customers"
 pv_allocation = pd.read_csv(r'..\Input_Data\PV_split\Pv_split.csv')
+pv_allocation = pv_allocation.iloc[:,1:]
 
 "The parameters you do not need to change"
 n_coustomer = number_customers() # number of customers, depend on number of consumptions files you upload
