@@ -1,7 +1,7 @@
 from PV import *
 from Consumption import *
 from Energy_flux import *
-from Tariff_df import *
+# from Tariff_df import *
 import pandas as pd
 import numpy as np
 import os
