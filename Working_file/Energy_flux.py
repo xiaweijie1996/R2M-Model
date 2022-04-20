@@ -4,9 +4,8 @@ from PV import *
 from Consumption import *
 
 def consumer_profile (
-    #battery static parameters
-    path,
-    pv_data,# path of customer data file
+    path, # path of customer data file
+    pv_data,
     parameters = [1,30000,0.05,1400,4,7],
     cap_dy = 0,  #capacity_battery of battery dynamic
     c = 0
@@ -39,7 +38,7 @@ def consumer_profile (
     data_all_or = customer_data_profile(path,pv_data)
     data_all_or_consumer = np.copy(data_all_or)
     for i in range(len(data_all_or)):
-        data_all_or_consumer[i,2] = pv_consumer_percentage*data_all_or[i,2]
+        data_all_or_consumer[i,2] = pv_consumer_percentage[i]*data_all_or[i,2]
         if data_all_or_consumer[i,2]-data_all_or_consumer[i,3]<0:
             data_all_or_consumer[i,4] = 0
         else:
