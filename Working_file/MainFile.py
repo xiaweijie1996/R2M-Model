@@ -18,7 +18,7 @@ loss = 0.8
 number_panels = 40
 
 "Adjusting battery parameters"
-capacity_battery = 30000   #batter's capacity_battery, Wh 
+   
 deep_battery = 0.05  #The maximum allowed charge deepth 
 bat_charge_speed = 1400 #charging speed, Wh
 
@@ -26,23 +26,26 @@ bat_charge_speed = 1400 #charging speed, Wh
 char_time_start = 3  #charging start time
 char_time_stop = 4   #charging stop time
 
-"Spliting PV generation"
-pv_allocation=[0, 0.2, 0, 0.8]  # The number of components have to match the number of customers
+"Capacity of  battery"
+capacity_battery = [3000,2000,1000,3000] #batter's capacity_battery, Wh 
 
 "————————————————————————————————————————————"
+"The number of components have to match the number of customers"
+pv_allocation = pd.read_csv(r'..\Input_Data\PV_split\Pv_split.csv')
+pv_allocation = pv_allocation.iloc[:,1:]
 
 "The parameters you do not need to change"
 n_coustomer = number_customers() # number of customers, depend on number of consumptions files you upload
 pv = PV(area,panel_efficiency,loss,number_panels)
-parameters_consumption = [1,capacity_battery,deep_battery,bat_charge_speed,char_time_start,char_time_stop]
 
 "Creating Energy flux data file"
 for i in range(n_coustomer):
+    parameters_consumption = [1,capacity_battery[i],deep_battery,bat_charge_speed,char_time_start,char_time_stop]
     in_file_prefix = r'..\Input_Data\customer_consumption\consumption_data'
     in_file_name = in_file_prefix + str(i) + '.csv' 
     out_file_prefix = r'..\Output_Data\EnergyFlux_data\con_gen_data'
     out_file_name = out_file_prefix + str(i) + '.csv' 
-    parameters_consumption[0] =  pv_allocation[i]
+    parameters_consumption[0] =  pv_allocation.iloc[:,i]
     with open(out_file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerows(consumer_profile(in_file_name,pv,parameters_consumption))

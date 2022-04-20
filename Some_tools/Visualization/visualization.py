@@ -9,7 +9,7 @@ file_name = 'con_gen_data3.csv'  # The name is the file name of output file
 prefix = r'..\..\Output_Data\EnergyFlux_data'
 path = prefix  + '\\' + file_name
 
-"Surplus in a day ( average for a year) withou battery"
+"Surplus in a day ( average for a year) without battery"
 con_gen_curve = pd.read_csv(path,engine = "python" )
 day_surplus=np.zeros(24)
 for y in range(len(con_gen_curve)):
@@ -39,7 +39,7 @@ month_surplus=month_surplus/12
 
 x3=range(24*30)
 x4=month_surplus
-string='Average surplus in a month withou battery'
+string='Average surplus in a month without battery'
 plt.title(string) 
 plt.xlabel("Time h") 
 plt.ylabel("Surplus Wh")
@@ -96,7 +96,7 @@ month_grid = month_grid/12
 x8=month_con
 x9=month_grid
 x10=month_pv
-string='Average consumption&PV&Grid consumption over a day without battery'
+string='Average consumption&PV&Grid consumption over a month without battery'
 plt.title(string) 
 plt.plot(x3,x8,label='Total consumption')
 plt.plot(x3,x9,label='Grid consumption')
@@ -117,10 +117,10 @@ for y in range(len(con_gen_curve)):
 day_dump=day_dump/365
 x11=range(24)
 x12=day_dump
-string='Dumped eneryg over a day(with battery)'
+string='Dumped energy over a day(with battery)'
 plt.title(string) 
 plt.xlabel("Time h") 
-plt.ylabel("Dumped eneryg Wh")
+plt.ylabel("Dumped energy Wh")
 plt.plot(x11,day_surplus,'--',label='Surplus')
 plt.plot(x11,x12,label='Dumped energy')
 plt.legend()
