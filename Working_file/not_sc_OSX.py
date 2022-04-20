@@ -16,7 +16,7 @@ if user == "Business":
     cons_np = np.array(cons_p)/1000  # converting KWh to MWh 
     tot_energy = np.sum(cons_np * Energy_term_3)/12  # Calculating the Bill in terms of Energy
     tot_power = np.sum(Power_term_3 * Billed_power_3)* 30
-    print("Energy Consumption per month in MWh : ", np.sum(cons_np)/12) # Calculating the amount of energy used each month.
+    print("Energy Consumption per month in MWh : ", "{:.2f}".format(np.sum(cons_np)/12)) # Calculating the amount of energy used each month.
 
 
 elif user == "Residential" or user =="Homeowner":
@@ -31,12 +31,12 @@ elif user == "Residential" or user =="Homeowner":
     cons_np = np.array(cons_p)/1000
     tot_energy = np.sum(cons_np * Energy_term_2)/(12*19)  # for each household
     tot_power = (2/3)*(Power_term_2[0] * Billed_power_2[0])* 30 + (1/3)*(Power_term_2[1] * Billed_power_2[1])*30
-    print("Energy Consumption per month in MWh : ",np.sum(cons_np)/12)
+    print("Energy Consumption per month in MWh : ","{:.2f}".format(np.sum(cons_np)/12))
 else:
     print("Please enter a valid customer type")
 
-print("Invoiced Energy per month in Euro : ",tot_energy)
-print("Invoiced Power per month in Euro : ",tot_power)
+print("Invoiced Energy per month in Euro : ","{:.2f}".format(tot_energy))
+print("Invoiced Power per month in Euro : ","{:.2f}".format(tot_power))
 
 tax_electricity = 0.051127  # 5.11 percentage
 meter_rent  = 0.81*30      # in Euro per month
@@ -46,8 +46,8 @@ IVA = 0.21       # 21 Percent
 tot = (tot_energy + tot_power) * (1 + tax_electricity)
 bef_iva = tot + em_service + meter_rent
 tot_inv = bef_iva * (1 + IVA)
-print("Invoice after Electricity tax in Euro: ", tot)
-print("Metered Equipment rental: in Euro ",meter_rent)
-print("Electrical emergency service in Euro : ",em_service)
-print("Invoice before IVA: " ,bef_iva)
-print("Total Invoice in Euro: ", tot_inv)
+print("Invoice after Electricity tax in Euro: ", "{:.2f}".format(tot))
+print("Metered Equipment rental: in Euro ","{:.2f}".format(meter_rent))
+print("Electrical emergency service in Euro : ","{:.2f}".format(em_service))
+print("Invoice before IVA: " ,"{:.2f}".format(bef_iva))
+print("Total Invoice in Euro: ", "{:.2f}".format(tot_inv))

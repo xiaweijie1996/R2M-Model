@@ -1,8 +1,8 @@
 from PV_OSX import *
 from Consumption_OSX import *
 from Energy_flux_OSX import *
-from Tariff_df_OSX import *
 import pandas as pd
+import time
 import numpy as np
 import os
 import csv
@@ -28,26 +28,6 @@ char_time_stop = 4   #charging stop time
 "Capacity of  battery"
 capacity_battery = [3000,2000,1000,3000] #batter's capacity_battery, Wh
 
-"Updating Tariffs"  
-"3.0 TD"
-
-Energy_term_3  = np.array([0.387, 0.350, 0.319, 0.293, 0.266, 0.253]) # EUR/MWh
-Power_term_3   = np.array([0.045671833, 0.033543392, 0.016257762, 0.013830986, 0.009228504, 0.005896482])   # Euro per kw per day
-Billed_power_3 = np.array([18, 18, 18, 18, 18, 18])  # in KW
-
-"2.0 TD"
-
-Energy_term_2  = np.array([0.407, 0.320, 0.262])  # EUR/MWh
-Power_term_2   = np.array([0.081583562, 0.008432877])    # Euro per kw per day
-Billed_power_2 = np.array([4, 4])   # in KW
-
-# These might vary with the location.
-tax_electricity = 0.051127  # 5.11 percentage ,  Electricity tax
-meter_rent  = 0.81*30      # in Euro per month ,  Metered equipment rental
-em_service  = 2.06      # in Euro per month , Electrical Emergancy service
-IVA = 0.21       # 21 Percent, equivalent to VAT (Value Added Tax)
-pv_energy_terms = 0.12, # EUR/KWh , Power purchase agreement
-
 "————————————————————————————————————————————"
 "The number of components have to match the number of customers"
 pv_allocation = pd.read_csv(r'..\Input_Data\PV_split\Pv_split.csv')
@@ -67,7 +47,38 @@ for i in range(n_coustomer):
         writer = csv.writer(file)
         writer.writerows(consumer_profile(in_file_name,pv,parameters_consumption))
 
+#long process here
+time.sleep(6)
+done = True
+
 "Billing Customers"
+
+from Tariff_df_OSX import *
+
+"The parameters you can change"
+"————————————————————————————————————————————"
+"Updating Tariffs"  
+
+"3.0 TD"
+
+Energy_term_3  = np.array([0.387, 0.350, 0.319, 0.293, 0.266, 0.253]) # EUR/MWh
+Power_term_3   = np.array([0.045671833, 0.033543392, 0.016257762, 0.013830986, 0.009228504, 0.005896482])   # Euro per kw per day
+Billed_power_3 = np.array([18, 18, 18, 18, 18, 18])  # in KW
+
+"2.0 TD"
+
+Energy_term_2  = np.array([0.407, 0.320, 0.262])  # EUR/MWh
+Power_term_2   = np.array([0.081583562, 0.008432877])    # Euro per kw per day
+Billed_power_2 = np.array([4, 4])  # in KW
+
+"————————————————————————————————————————————"
+
+# These might vary with the location.
+tax_electricity = 0.051127  # 5.11 percentage ,  Electricity tax
+meter_rent  = 0.81*30      # in Euro per month ,  Metered equipment rental
+em_service  = 2.06      # in Euro per month , Electrical Emergancy service
+IVA = 0.21       # 21 Percent, equivalent to VAT (Value Added Tax)
+pv_energy_terms = 0.12, # EUR/KWh , Power purchase agreement
 
 User_input = input("Are you a self-consumer [Yes/No]: ")  # Answer "Yes" or "No"
 
@@ -79,4 +90,3 @@ elif User_input == "No":
 
 else:
     print("Please Answer with Yes or No")
-
