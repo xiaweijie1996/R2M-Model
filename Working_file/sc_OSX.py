@@ -20,7 +20,7 @@ if user == "Business":
     print("Energy Consumption per month in MWh : ","{:.2f}".format(np.sum(cons_np)/12))
     pv_energy_terms = 0.12
     pv_ppa = np.sum(r6)*pv_energy_terms/(12*1000)
-    R2M = 6*20    # Euro / month
+    R2M = 6*10    # Euro / month
 
 elif user == "Residential" or user == "Homeowner":
     Tariffs_2 = np.array(['P1','P2','P3'])
