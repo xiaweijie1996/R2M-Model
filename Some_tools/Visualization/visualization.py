@@ -224,6 +224,7 @@ plt.close()
 
 
 '''Hourly-wise data'''
+'''Average hourly data for each month and a whole year'''
 
 
 def get_hour_wise(data):
@@ -273,6 +274,11 @@ for m, _ in enumerate(MONTH_DAYS):
     hourly_con, hourly_gen, hourly_pow, hourly_sur = get_hour_wise(monthly_data)
     plot_hour_wise(hourly_con, hourly_gen, hourly_pow, m + 1)
 
+all_hourly_con, all_hourly_gen, all_hourly_pow, all_hourly_sur= get_hour_wise(data)
+'all_hourly_con = list(np.array(all_hourly_con))'
+'all_hourly_gen = list(np.array(all_hourly_gen))'
+'all_hourly_pow = list(np.array(all_hourly_pow))'
+plot_hour_wise(all_hourly_con, all_hourly_gen, all_hourly_pow, 'all')
 
 
 "hourly wise data without battery"
@@ -289,8 +295,8 @@ def plot_hour_wise_nobat(hourly_con, hourly_gen, grid_con, month_idx):
     plt.legend(loc=1)
     plt.ylim(ymin=0)
     plt.xlim(xmin=0)
-    plt.title(f'Average hourly data in Month {month_idx}')
-    plt.savefig(f'NB hourly_of_month{month_idx}.png')
+    plt.title(f'Average hourly data without battery in Month {month_idx}')
+    plt.savefig(f'NoBattery hourly_of_month{month_idx}.png')
     plt.close()
 
 
@@ -307,4 +313,4 @@ for m, _ in enumerate(MONTH_DAYS):
 
 all_hourly_con, all_hourly_gen, all_hourly_pow, all_hourly_sur = get_hour_wise(data)
 all_grid_con =list(np.array(all_hourly_con) - np.array(all_hourly_gen) + np.array(all_hourly_sur))
-plot_hour_wise(all_hourly_con, all_hourly_gen, all_grid_con, 'all')
+plot_hour_wise_nobat(all_hourly_con, all_hourly_gen, all_grid_con, 'all')
