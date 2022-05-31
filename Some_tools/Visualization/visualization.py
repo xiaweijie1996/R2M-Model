@@ -225,7 +225,7 @@ plt.close()
 
 '''Hourly-wise data'''
 '''Average hourly data for each month and a whole year'''
-
+data = con_gen_curve.copy()
 
 def get_hour_wise(data):
     hourly_con, hourly_gen, hourly_pow, hourly_sur = [], [], [], []
